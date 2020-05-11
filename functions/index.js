@@ -11,7 +11,8 @@ exports.removeRecipeIndex = functions.firestore
     let recipeId = context.params.recipeId;
     let elasticsearchFields = ['title', 'description'];
     let elasticSearchConfig = functions.config().elasticsearch;
-    let elasticSearchUrl = elasticSearchConfig.url + 'temp/recipes/' + recipeId;
+    let elasticSearchUrl =
+      elasticSearchConfig.url + 'mademe/recipes/' + recipeId;
 
     let elasticsearchRequest = {
       method: 'DELETE',
@@ -36,7 +37,8 @@ exports.createRecipeIndex = functions.firestore
 
     let elasticsearchFields = ['title', 'description'];
     let elasticSearchConfig = functions.config().elasticsearch;
-    let elasticSearchUrl = elasticSearchConfig.url + 'temp/recipes/' + recipeId;
+    let elasticSearchUrl =
+      elasticSearchConfig.url + 'mademe/recipes/' + recipeId;
 
     let elasticsearchRequest = {
       method: 'POST',
